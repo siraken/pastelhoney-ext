@@ -4,6 +4,10 @@ import { routerAtom } from '../atoms/router';
 import { If, Then, Else } from 'react-if';
 import { OrocaPage } from './members/oroca';
 import { YukimuraPage } from './members/yukimura';
+import { SatoNozomiPage } from './members/sato-nozomi';
+import { MarinaruPage } from './members/marinaru';
+import { BabynicoPage } from './members/babynico';
+import { ZepaPage } from './members/zepa';
 
 const Link = ({
   href,
@@ -114,16 +118,24 @@ export const Home = () => {
             <a href="#" onClick={() => setRoute('home')}>
               戻る
             </a>
-            <If condition={route === 'satonozomi'}></If>
+            <If condition={route === 'satonozomi'}>
+              <SatoNozomiPage />
+            </If>
             <If condition={route === 'oroca'}>
               <OrocaPage />
             </If>
-            <If condition={route === 'marinaru'}></If>
-            <If condition={route === 'babynico'}></If>
+            <If condition={route === 'marinaru'}>
+              <MarinaruPage />
+            </If>
+            <If condition={route === 'babynico'}>
+              <BabynicoPage />
+            </If>
             <If condition={route === 'yukimurachan'}>
               <YukimuraPage />
             </If>
-            <If condition={route === 'zepa'}></If>
+            <If condition={route === 'zepa'}>
+              <ZepaPage />
+            </If>
           </Else>
         </If>
       </div>

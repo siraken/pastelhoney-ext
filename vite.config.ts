@@ -17,6 +17,13 @@ const manifest = defineManifest({
     '48': `${IMAGE_DIR}/icon-48.jpg`,
     '128': `${IMAGE_DIR}/icon-128.jpg`,
   },
+  permissions: [
+    'activeTab',
+    'scripting',
+    'contextMenus',
+    'clipboardRead',
+    'clipboardWrite',
+  ],
   content_scripts: [
     {
       js: [`${SCRIPT_DIR}/content.ts`],
@@ -28,9 +35,9 @@ const manifest = defineManifest({
     default_icon: `${IMAGE_DIR}/icon-48.jpg`,
     default_title: 'ぱすはに',
   },
-  // background: {
-  //   service_worker: 'src/scripts/background.ts',
-  // },
+  background: {
+    service_worker: 'src/scripts/background.ts',
+  },
 });
 
 export default defineConfig({

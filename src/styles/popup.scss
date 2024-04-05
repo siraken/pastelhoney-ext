@@ -1,0 +1,9 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-width: 480px;
+  min-height: 320px;
+}
